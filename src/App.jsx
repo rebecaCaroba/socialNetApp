@@ -11,6 +11,7 @@ export function App() {
 
       <div className={styles.wrapper}>
         <Sidebar />
+        
         <main>
           <Post
             author="Rebeca Caroba"
