@@ -8,8 +8,13 @@
     --gray-700: #29292e;
     --gray-800: #202024;
     --gray-900: #121214;
-    --yellow-500: #ce9f13;
+    --yellow-500: #cd8d00;
     --yellow-300: #f1b80d;
+}
+
+:focus {
+    outline: transparent;
+    box-shadow: 0 0 0 2px var(--yellow-500);
 }
 
 * {
