@@ -31,7 +31,7 @@ const posts = [
       { type: 'paragraph', content:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex cupiditate inventore explicabo incidunt! Temporibus fugit maxime deleniti facere quidem.'},
       { type: 'link', content:'jane.design/doctorcare'},
     ], 
-    publishedAt: new Date('2023-08-10 08:40:30'),
+    publishedAt: new Date('2023-08-06 08:40:30'),
   }
 ]
 
