@@ -4,6 +4,37 @@ import styles from "./App.module.css"
 import { Sidebar } from "./Components/Sidebar";
 import { Post } from "./Components/Post";
 
+const posts = [
+  {
+    Id: 1,
+    author : {
+      avatarUrl: "https://github.com/rebecacaroba.png", 
+      name: "Rebeca Caroba",
+      role: "CTO @Netflix",
+    },
+    content: [
+      { type: 'paragraph', content:'Fala galeraa 👋',},
+      { type: 'paragraph', content:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex cupiditate inventore explicabo incidunt! Temporibus fugit maxime deleniti facere quidem.'},
+      { type: 'link', content:'jane.design/doctorcare'},
+    ], 
+    publishedAt: new Date('2023-08-08 08:40:30'),
+  },
+  {
+    Id: 1,
+    author : {
+      avatarUrl: "https://github.com/pedrosouz6.png", 
+      name: "Pedro Souza",
+      role: "CTO @Google",
+    },
+    content: [
+      { type: 'paragraph', content:'Fala galeraa 👋',},
+      { type: 'paragraph', content:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex cupiditate inventore explicabo incidunt! Temporibus fugit maxime deleniti facere quidem.'},
+      { type: 'link', content:'jane.design/doctorcare'},
+    ], 
+    publishedAt: new Date('2023-08-10 08:40:30'),
+  }
+]
+
 export function App() {
   return (
     <div>
@@ -11,16 +42,16 @@ export function App() {
 
       <div className={styles.wrapper}>
         <Sidebar />
-        
         <main>
-          <Post
-            author="Rebeca Caroba"
-            content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime est numquam, mollitia voluptates tempora ea ipsum recusandae, laudantium alias accusantium dolorem. Architecto dolor tenetur facere possimus quasi suscipit voluptates similique!"
-          />
-          <Post
-            author="Bill Gates"
-            content="O dia tá lindo"
-          />
+          {posts.map(post => {
+            return (
+            <Post 
+              author={post.author}
+              content={post.content}
+              publishedAt={post.publishedAt}
+            />
+            )
+          })}
         </main>
       </div>
     </div>
